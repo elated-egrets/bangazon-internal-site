@@ -30,16 +30,11 @@ employee_edit_view.py
 The following resources are available through the application
 
 ### Training Programs
-Training programs hold information about the training events employees can attend.
+Training programs information is stored in the training_programs table
+It contains the following information
 
-The data is held between two tables
-
-1. Training programs holds information about a type of training program offered
-    - name (string) the name of the program
-    - description (string) a description of the program
-
-1. Training program events holds information about the individual sessions
-    - training_program_id (foreign key) the id of the training program that will be taught
-    - start_date (date) the start date of the event
-    - end_date (date) the end date of the event
-    - max_attendees (integer) the maximum number of attendees who can attend the event
+name - string, max length 40 characters
+description - string, max length 200 characters
+start_date - date, start date of the event
+end_date - date, end date of the event
+max_attendees - integer, maximum people who can attend the event

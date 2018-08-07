@@ -1,0 +1,1 @@
+from .departments_model import Departments

@@ -1,1 +1,1 @@
-from .department_list import current_datetime
+from .department_list import DepartmentList

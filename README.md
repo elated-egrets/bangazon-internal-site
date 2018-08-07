@@ -29,6 +29,17 @@ employee_edit_view.py
 
 The following resources are available through the application
 
+### Employee
+Employees hold information about the employees.
+
+1. Employee table holds infromation about an employee
+    - first name(string) the first name of the employee
+    - last name(string) the last name of the employee
+    - department id(foreign key) the id of the employee's department
+    - start date is the time the employee was created
+    - end date is a date input
+    - is supervisor is a boolean value to represent if supervisor
+
 ### Training Programs
 Training programs hold information about the training events employees can attend.
 

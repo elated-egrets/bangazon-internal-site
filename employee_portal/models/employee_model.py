@@ -17,7 +17,7 @@ class Employee_Model(models.Model):
 
     first_name = models.CharField(max_length = 10)
     last_name = models.CharField(max_length = 10)
-    department_id = models.ForeignKey(Department, related_name="department", on_delete=models.CASCADE)
+    department_id = models.ForeignKey(Departments, related_name="department", on_delete=models.CASCADE)
     state_date = timezone.now()
     end_date = models.DateField()
     is_supervisor = models.BooleanField(default=False)

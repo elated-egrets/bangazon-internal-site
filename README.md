@@ -24,3 +24,9 @@ examples
 employee_model.py
 employee_edit_view.py
 ```
+
+## Models:
+
+### Departments
+id
+name (string)

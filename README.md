@@ -24,3 +24,22 @@ examples
 employee_model.py
 employee_edit_view.py
 ```
+
+## Resources
+
+The following resources are available through the application
+
+### Training Programs
+Training programs hold information about the training events employees can attend.
+
+The data is held between two tables
+
+1. Training programs holds information about a type of training program offered
+    - name (string) the name of the program
+    - description (string) a description of the program
+
+1. Training program events holds information about the individual sessions
+    - training_program_id (foreign key) the id of the training program that will be taught
+    - start_date (date) the start date of the event
+    - end_date (date) the end date of the event
+    - max_attendees (integer) the maximum number of attendees who can attend the event

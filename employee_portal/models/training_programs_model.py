@@ -1,4 +1,8 @@
 from django.db import models
+# from django.db import migrations
+
+# class Migration(migrations.Migration):
+#     atomic = False
 
 """
     module: training programs model
@@ -18,6 +22,12 @@ class Training_Programs_Model(models.Model):
         Fields:
             name - string, max length 40 characters
             description - string, max length 200 characters
+            start_date - date, start date of the event
+            end_date - date, end date of the event
+            max_attendees - integer, maximum people who can attend the event
     """
     name = models.CharField(max_length=40)
     description = models.CharField(max_length=200)
+    start_date = models.DateField()
+    end_date = models.DateField()
+    max_attendees = models.IntegerField()

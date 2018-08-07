@@ -1,5 +1,10 @@
 from django.db import models
+
 from .training_programs_model import Training_Programs_Model
+# from django.db import migrations
+
+# class Migration(migrations.Migration):
+#     atomic = False
 
 """
     module: training program events model

@@ -5,12 +5,13 @@
 # For Mac users, save this file as django_data.sh in usr/local/bin
 # (Which is at your machine's root, not your Users folder)
 
+# You will need to change the permissions of this file with chmod +x django_data.sh to make it executable.
 
-# The name of the django app that contains the models you want to add to the db schema/update
+# Now you can run it with two args:
+    # 1. The name of the django app that contains the models you want to add to the db schema/update
 
-# The name of the custom command file. If my app was called bangazon_api, then I would type
-
-# django_data.sh bangazon_api faker_factory
+    # 2. The name of the custom command file. If my app was called bangazon_api, then I would type
+        # django_data.sh bangazon_api faker_factory
 
 find . -path "/$1/migrations/*.py" -not -name "__init__.py" -delete; #deletes all of the .py files in the migrations directory except for the __init__.py file.
 find . -path "/$1/migrations/*.pyc"  -delete; #deletes all of the .pyc files in the migrations directory.

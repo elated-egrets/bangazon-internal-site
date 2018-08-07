@@ -17,8 +17,8 @@ class Employee_Model(models.Model):
 
     first_name = models.CharField(max_length = 10)
     last_name = models.CharField(max_length = 10)
-    department_id = models.ForeignKey(Departments, related_name="department", on_delete=models.CASCADE)
-    state_date = timezone.now()
+    department_id = models.ForeignKey(Departments, on_delete=models.CASCADE)
+    start_date = timezone.now()
     end_date = models.DateField()
     is_supervisor = models.BooleanField(default=False)
 
@@ -29,5 +29,5 @@ class Employee_Model(models.Model):
            string --- employee name and then description of said employee.
         """
 
-        return f'{self.first_name} {self.last_name} {department_id}'
+        return f'{self.first_name} {self.last_name} {self.department_id}'
 

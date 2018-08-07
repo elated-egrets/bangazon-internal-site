@@ -2,7 +2,7 @@ from django.core.management.base import BaseCommand
 from django_seed import Seed
 seeder = Seed.seeder()
 import random
-from employee_portal.models import Training_Programs_Model, Training_Program_Events_Model
+from employee_portal.models import Training_Programs_Model, Employee_Model, Departments, Employee_Trainings_Model
 
 
 class Command(BaseCommand):
@@ -14,9 +14,8 @@ class Command(BaseCommand):
         # the number argument is the total num of rows you want created
 
         seeder.add_entity(Training_Programs_Model, 12)
-        seeder.add_entity(Training_Program_Events_Model, 12)
-        # seeder.add_entity(models.employees, 12)
-        # seeder.add_entity(models.departments, 12)
-        # seeder.add_entity(models.employee_trainings, 12)
+        seeder.add_entity(Departments, 12)
+        seeder.add_entity(Employee_Model, 12)
+        seeder.add_entity(Employee_Trainings_Model, 12)
 
         inserted_pks = seeder.execute()

@@ -2,7 +2,7 @@ from django.core.management.base import BaseCommand
 from django_seed import Seed
 seeder = Seed.seeder()
 import random
-from employee_portal.models import Training_Programs_Model, Training_Program_Events_Model
+from employee_portal.models import Training_Programs_Model, Training_Program_Events_Model, Departments
 
 
 class Command(BaseCommand):
@@ -16,7 +16,7 @@ class Command(BaseCommand):
         seeder.add_entity(Training_Programs_Model, 12)
         seeder.add_entity(Training_Program_Events_Model, 12)
         # seeder.add_entity(models.employees, 12)
-        # seeder.add_entity(models.departments, 12)
+        seeder.add_entity(Departments, 12)
         # seeder.add_entity(models.employee_trainings, 12)
 
         inserted_pks = seeder.execute()

@@ -25,6 +25,7 @@ employee_model.py
 employee_edit_view.py
 ```
 
+
 ## Resources
 
 The following resources are available through the application
@@ -43,3 +44,7 @@ The data is held between two tables
     - start_date (date) the start date of the event
     - end_date (date) the end date of the event
     - max_attendees (integer) the maximum number of attendees who can attend the event
+    
+### Departments
+1. id
+1. name (string)

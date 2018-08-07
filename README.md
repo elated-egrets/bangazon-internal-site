@@ -60,3 +60,8 @@ This model is the intersection for employee to training programs
 
 employee_id - foreign key, reference to employee table
 training_program_id - foreign key, reference to training program table
+
+## Faker Data Setup
+Use your models to create fake data in the employee_portal/manage/commands/faker_factory.py
+you can view the documentation for seeder arguments here
+https://github.com/Brobin/django-seed

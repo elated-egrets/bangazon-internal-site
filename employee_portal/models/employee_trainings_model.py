@@ -8,7 +8,7 @@ from .training_programs_model import Training_Programs_Model
     purpose: to hold the model for employee training
 """
 
-class Employee_Trainings(models.Model):
+class Employee_Trainings_Model(models.Model):
     """
         This class is the intersection table from employees to training programs
 

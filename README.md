@@ -54,3 +54,9 @@ max_attendees - integer, maximum people who can attend the event
 ### Departments
 1. id
 1. name (string)
+
+
+## Faker Data Setup
+Use your models to create fake data in the employee_portal/manage/commands/faker_factory.py
+you can view the documentation for seeder arguments here
+https://github.com/Brobin/django-seed

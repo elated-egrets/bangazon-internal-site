@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+from .departments_model import Departments
 
 class Employee_Model(models.Model):
     """[Model for employee table

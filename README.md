@@ -50,11 +50,16 @@ description - string, max length 200 characters
 start_date - date, start date of the event
 end_date - date, end date of the event
 max_attendees - integer, maximum people who can attend the event
-    
+
 ### Departments
 1. id
 1. name (string)
 
+### employee trainings
+This model is the intersection for employee to training programs
+
+employee_id - foreign key, reference to employee table
+training_program_id - foreign key, reference to training program table
 
 ## Faker Data Setup
 Use your models to create fake data in the employee_portal/manage/commands/faker_factory.py

@@ -63,3 +63,13 @@ max_attendees - integer, maximum people who can attend the event
 Use your models to create fake data in the employee_portal/manage/commands/faker_factory.py
 you can view the documentation for seeder arguments here
 https://github.com/Brobin/django-seed
+
+
+## URLS and views
+
+urls will follow the following conventions
+
+rootdirectory/<resource name>/ for list view
+rootdirectory/<resource name>/<pk:id> for detail views
+rootdirectory/<resource name>/add for adding form
+rootdirectory/<resource name>/<pk:id>/edit for editing a resource

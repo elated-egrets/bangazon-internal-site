@@ -22,12 +22,13 @@ class DepartmentList(ListView):
   context_object_name = 'department_list'
   template_name = 'employee_portal/department_list.html'
 
-  def department_list(self):
-    """[summary]
+  # def department_list(self):
+  #   """
+  #   [summary]
     
-    Returns:
-      [type] -- [description]
-    """
+  #   Returns:
+  #     [type] -- [description]
+  #   """
+  #   departments = Departments.objects.all()
 
-    departments = Departments.objects.all()
-    return departments
+  #   return departments

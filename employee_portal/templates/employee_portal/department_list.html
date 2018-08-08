@@ -6,7 +6,8 @@
     <ul>
         {% for department in department_list %}
         <li>
-            {{department.name}}
+            <a href="{% url 'employee_portal:department_detail' department.id %}" class="department">{{department.name}}</a>
+            
         </li>
         {% endfor %}
     </ul>

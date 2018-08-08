@@ -1,0 +1,7 @@
+
+<h1>Welcome to Employeer Portal</h1>
+
+{% block main_stuff %}
+  {% comment %} Including nav_bar in each template so we can pass the location to it each time {% endcomment %}
+  {% include "employee_portal/nav_bar.html" with nav_location=view.location %}
+{% endblock main_stuff %}

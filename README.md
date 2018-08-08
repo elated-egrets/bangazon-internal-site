@@ -25,10 +25,12 @@ employee_model.py
 employee_edit_view.py
 ```
 
-
 ## Resources
 
 The following resources are available through the application
+
+### Navbar
+A navbar that links to the resources below. More links can be added by adding buttons that follow the same formula and path of the newly linked item.
 
 ### Employee
 Employees hold information about the employees.
@@ -40,6 +42,7 @@ Employees hold information about the employees.
     - start date is the time the employee was created
     - end date is a date input
     - is supervisor is a boolean value to represent if supervisor
+    - training_program (many to many) many to many relationship generated with training programs
 
 ### Training Programs
 Training programs information is stored in the training_programs table
@@ -50,7 +53,25 @@ description - string, max length 200 characters
 start_date - date, start date of the event
 end_date - date, end date of the event
 max_attendees - integer, maximum people who can attend the event
-    
+
 ### Departments
 1. id
 1. name (string)
+
+
+## Faker Data Setup
+To populate DB, run: `django_data.sh employee_portal faker_factory` from terminal in the directory that contains django_data.sh
+
+Use your models to create fake data in the employee_portal/manage/commands/faker_factory.py
+you can view the documentation for seeder arguments here
+https://github.com/Brobin/django-seed
+
+
+## URLS and views
+
+urls will follow the following conventions
+
+rootdirectory/<resource name>/ for list view
+rootdirectory/<resource name>/<pk:id> for detail views
+rootdirectory/<resource name>/add for adding form
+rootdirectory/<resource name>/<pk:id>/edit for editing a resource

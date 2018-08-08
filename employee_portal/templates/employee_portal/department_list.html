@@ -1,7 +1,7 @@
 {% extends "employee_portal/index.html" %}
 
 {% block main_stuff %}
-{% include 'employee_portal/nav_bar.html with nav_location=department %}
+    {% include 'employee_portal/nav_bar.html' with nav_location=department %}
     <p class="test">Hey everybody</p>
 
     <ul>
@@ -12,4 +12,4 @@
         </li>
         {% endfor %}
     </ul>
-{%endblock main_stuff%}
+{% endblock %}

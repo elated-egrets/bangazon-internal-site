@@ -60,6 +60,8 @@ max_attendees - integer, maximum people who can attend the event
 
 
 ## Faker Data Setup
+To populate DB, run: `django_data.sh employee_portal faker_factory` from terminal in the directory that contains django_data.sh
+
 Use your models to create fake data in the employee_portal/manage/commands/faker_factory.py
 you can view the documentation for seeder arguments here
 https://github.com/Brobin/django-seed

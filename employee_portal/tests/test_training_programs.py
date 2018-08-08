@@ -35,7 +35,7 @@ class Test_Training_Programs(TestCase):
 
         response = self.client.get(reverse('employee_portal:add_training'))
 
-        self.assertIn('<input type="text" name="description" maxlength="200" required id="id_description">'.encode(), response.content)
+        self.assertIn('<form'.encode(), response.content)
 
     def test_post_artist(self):
         """ method to test that we can post an artst to the form """

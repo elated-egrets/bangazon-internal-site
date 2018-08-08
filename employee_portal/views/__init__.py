@@ -1,1 +1,2 @@
 from .index_view import Index_View
+from .training_program_list_view import Training_Program_List_View

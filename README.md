@@ -42,6 +42,7 @@ Employees hold information about the employees.
     - start date is the time the employee was created
     - end date is a date input
     - is supervisor is a boolean value to represent if supervisor
+    - training_program (many to many) many to many relationship generated with training programs
 
 ### Training Programs
 Training programs information is stored in the training_programs table
@@ -57,11 +58,6 @@ max_attendees - integer, maximum people who can attend the event
 1. id
 1. name (string)
 
-### employee trainings
-This model is the intersection for employee to training programs
-
-employee_id - foreign key, reference to employee table
-training_program_id - foreign key, reference to training program table
 
 ## Faker Data Setup
 Use your models to create fake data in the employee_portal/manage/commands/faker_factory.py

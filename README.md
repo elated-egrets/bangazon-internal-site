@@ -25,10 +25,12 @@ employee_model.py
 employee_edit_view.py
 ```
 
-
 ## Resources
 
 The following resources are available through the application
+
+### Navbar
+A navbar that links to the resources below. More links can be added by adding buttons that follow the same formula and path of the newly linked item.
 
 ### Employee
 Employees hold information about the employees.
@@ -50,7 +52,7 @@ description - string, max length 200 characters
 start_date - date, start date of the event
 end_date - date, end date of the event
 max_attendees - integer, maximum people who can attend the event
-    
+
 ### Departments
 1. id
 1. name (string)

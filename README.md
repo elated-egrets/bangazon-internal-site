@@ -25,10 +25,12 @@ employee_model.py
 employee_edit_view.py
 ```
 
-
 ## Resources
 
 The following resources are available through the application
+
+### Navbar
+A navbar that links to the resources below. More links can be added by adding buttons that follow the same formula and path of the newly linked item.
 
 ### Employee
 Employees hold information about the employees.

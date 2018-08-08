@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils import timezone
 from .departments_model import Departments
+from .training_programs_model import Training_Programs_Model
 
 class Employee_Model(models.Model):
     """[Model for employee table
@@ -13,6 +14,7 @@ class Employee_Model(models.Model):
         state_date --- The employee's start date.
         end_date --- The employee's end date.
         is_supervisor --- Is the person a supervisor or not.
+        training_program --- many to many field with training program table
     """
 
     first_name = models.CharField(max_length = 10)
@@ -21,6 +23,7 @@ class Employee_Model(models.Model):
     start_date = timezone.now()
     end_date = models.DateField()
     is_supervisor = models.BooleanField(default=False)
+    training_program = models.ManyToManyField(Training_Programs_Model)
 
     def __str__(self):
         """A string representation of the Employee.

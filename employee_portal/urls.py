@@ -1,7 +1,9 @@
 from django.urls import path
 
-from . import views
+from employee_portal import views
 
 
 app_name = 'employee_portal'
-urlpatterns = []
+urlpatterns = [
+    path('employees', views.Employee_List_View.as_view(), name='employee-list'),
+]

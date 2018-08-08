@@ -35,7 +35,16 @@ class Test_Training_Programs(TestCase):
 
         response = self.client.get(reverse('employee_portal:add_training'))
 
-        self.assertIn('<form'.encode(), response.content)
+        self.assertIn('<form action="/employees/"'.encode(), response.content)
+        self.assertIn('<input type="submit" value="Employees"'.encode(), response.content)
+        self.assertIn('<input type="submit" value="Training Programs"'.encode(), response.content)
+        self.assertIn('<input type="submit" value="Departments"'.encode(), response.content)
+        self.assertIn('<input type="text" name="name" maxlength="40" required id="id_name"'.encode(), response.content)
+        self.assertIn('<input type="text" name="description" maxlength="200" required id="id_description"'.encode(), response.content)
+        self.assertIn('<input type="text" name="start_date" required id="id_start_date"'.encode(), response.content)
+        self.assertIn('<input type="text" name="end_date" required id="id_end_date"'.encode(), response.content)
+        self.assertIn('<input type="number" name="max_attendees" required id="id_max_attendees"'.encode(), response.content)
+        self.assertIn('<input type="submit" value="Add Program"'.encode(), response.content)
 
     def test_post_artist(self):
         """ method to test that we can post an artst to the form """

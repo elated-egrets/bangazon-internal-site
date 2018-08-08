@@ -5,7 +5,7 @@
 
   <h1>Here's a List of training programs</h1>
 
-  <a>add training</a>
+  <a href="{% url 'employee_portal:add_training' %}">add training</a>
 
   <ul>
     {% for training in training_list %}

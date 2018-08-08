@@ -1,0 +1,17 @@
+{% extends "employee_portal/index.html" %}
+
+{% block main_stuff %}
+  {% include "employee_portal/nav_bar.html" with nav_location=location %}
+
+  <h1>Here's a List of training programs</h1>
+
+  <a>add training</a>
+
+  <ul>
+    {% for training in training_list %}
+    <li>
+      <p>{{training.name}}</p>
+    </li>
+    {% endfor %}
+  </ul>
+{% endblock main_stuff %}

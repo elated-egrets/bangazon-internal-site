@@ -1,0 +1,15 @@
+{% extends "employee_portal/index.html" %}
+
+{% block main_stuff %}
+
+  {% include "employee_portal/nav_bar.html" with nav_location=location %}
+
+  <h3>Add a new training programs</h3>
+
+  <form method='post'>
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Add Program">
+  </form>
+
+{% endblock %}

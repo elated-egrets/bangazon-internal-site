@@ -5,12 +5,12 @@
 
   <h1>Here's a List of training programs</h1>
 
-  <a href="{% url 'employee_portal:add_training' %}">add training</a>
+  <!-- <a href="{% url 'employee_portal:add_training' %}">add training</a> -->
 
   <ul>
     {% for training in training_list %}
     <li>
-      <p>{{training.name}}</p>
+      <a href="{% url 'employee_portal:training_detail' training.id %}">{{training.name}}</a>
     </li>
     {% endfor %}
   </ul>

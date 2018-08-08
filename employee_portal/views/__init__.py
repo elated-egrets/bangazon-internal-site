@@ -1,2 +1,1 @@
 from .department_list import DepartmentList
-from .department_detail import DepartmentDetail

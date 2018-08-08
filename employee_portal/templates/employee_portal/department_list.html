@@ -6,7 +6,7 @@
     <ul>
         {% for department in department_list %}
         <li>
-            <a href="{% url 'employee_portal:department_detail' department.id %}" class="department">{{department.name}}</a>
+{{department.name}}
             
         </li>
         {% endfor %}

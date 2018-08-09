@@ -1,4 +1,6 @@
 from django.urls import path
+
+from employee_portal import views
 from django.views.generic import ListView
 
 from . import views
@@ -6,6 +8,7 @@ from . import views
 
 app_name = 'employee_portal'
 urlpatterns = [
+    path('employees/', views.Employee_List_View.as_view(), name='employee_list'),
     path('departments/', views.DepartmentList.as_view(), name='department_list'),
     # path('department/<int:pk>', views.DepartmentDetail.as_view(), name='department_detail'),
     # path('department/add', views.department_add, name='department_add'),
@@ -15,4 +18,5 @@ urlpatterns = [
     path('training_programs/<int:pk>', views.Training_Program_Detail_View.as_view(), name='training_detail'),
     path('training_programs/<int:pk>/edit', views.Training_Program_Edit_View.as_view(), name='edit_training'),
     path('training_programs/add', views.Training_Program_Add_View.as_view(), name='add_training')
+
 ]

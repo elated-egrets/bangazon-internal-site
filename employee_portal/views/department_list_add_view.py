@@ -14,4 +14,4 @@ class Department_List_Add_View(FormView):
 
     def form_valid (self, form):
         form.save()
-        return super(Department_Add_View).form_valid(form)
+        return super(Department_Add_Form).form_valid(form)

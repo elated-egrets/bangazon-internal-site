@@ -1,13 +1,15 @@
 from django.urls import path
-
 from employee_portal import views
 from django.views.generic import ListView
-
 from . import views
 
 
 app_name = 'employee_portal'
 urlpatterns = [
+    path('', views.Index_View.as_view(), name='index'),
+    path('training_programs/', views.Training_Program_List_View.as_view(), name='training'),
+    path('training_programs/add', views.Training_Program_Add_View.as_view(), name='add_training'),
+    path('employees/<int:pk>/', views.Employee_Detail_View.as_view(), name="employee_detail"),
     path('employees/', views.Employee_List_View.as_view(), name='employee_list'),
     path('departments/', views.DepartmentList.as_view(), name='department_list'),
     # path('department/<int:pk>', views.DepartmentDetail.as_view(), name='department_detail'),

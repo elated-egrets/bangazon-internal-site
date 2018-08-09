@@ -1,0 +1,15 @@
+{% extends "employee_portal/index.html" %}
+
+{% block main_stuff %}
+    {% include 'employee_portal/nav_bar.html' with nav_location=department %}
+    <p class="test">Hey everybody</p>
+
+    <ul>
+        {% for department in department_list %}
+        <li>
+{{department.name}}
+            
+        </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

@@ -75,3 +75,9 @@ rootdirectory/<resource name>/ for list view
 rootdirectory/<resource name>/<pk:id> for detail views
 rootdirectory/<resource name>/add for adding form
 rootdirectory/<resource name>/<pk:id>/edit for editing a resource
+
+## tests
+make sure to create tests for each new resource and view to make sure they are sending the correct data/html/status code etc...
+
+tests will live under the tests directory and are run from the root directory using 
+`python manage.py test`

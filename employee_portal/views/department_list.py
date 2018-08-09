@@ -1,5 +1,5 @@
 from django.views.generic import ListView
-from employee_portal.models import Departments
+from employee_portal.models import Departments_Model
 
 """
 author: paul zimmerman-clayton
@@ -12,13 +12,13 @@ class DepartmentList(ListView):
   """
   summary: Class for DepartmentList view
   
-  specifies Departments model for use in the department list view
+  specifies Departments_Model model for use in the department list view
   names context object name as 'department_list'
   specifies template name as 'employee_portal/department_list.html'
   """
 
 
-  model = Departments
+  model = Departments_Model
   context_object_name = 'department_list'
   template_name = 'employee_portal/department_list.html'
 
@@ -29,6 +29,6 @@ class DepartmentList(ListView):
   #   Returns:
   #     [type] -- [description]
   #   """
-  #   departments = Departments.objects.all()
+  #   departments = Departments_Model.objects.all()
 
   #   return departments

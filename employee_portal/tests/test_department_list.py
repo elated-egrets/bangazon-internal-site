@@ -1,7 +1,7 @@
 import unittest
 from django.test import TestCase
 from django.urls import reverse
-from employee_portal.models import Departments
+from employee_portal.models import Departments_Model
 
 
 """
@@ -10,7 +10,7 @@ from employee_portal.models import Departments
     purpose: testing the department model
 """
 
-class Test_Departments(TestCase):
+class Test_Departments_Model(TestCase):
     """
     class to test the departments model
     """
@@ -18,7 +18,7 @@ class Test_Departments(TestCase):
     def test_departments_context(self):
         """method to test department can be created
         """
-        new_department = Departments.objects.create(
+        new_department = Departments_Model.objects.create(
             name='test department'
         )
 

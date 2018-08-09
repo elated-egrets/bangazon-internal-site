@@ -2,14 +2,15 @@
 
 {% block main_stuff %}
     {% include 'employee_portal/nav_bar.html' with nav_location=department %}
-    <p class="test">Hey everybody</p>
+    <p class="department_list">List of All Departments</p>
 
     <ul>
         {% for department in department_list %}
         <li>
-{{department.name}}
-            
+            <a href="{% url 'employee_portal:department_detail' department.id %}">{{department.name}}</a>
         </li>
         {% endfor %}
     </ul>
 {% endblock %}
+
+

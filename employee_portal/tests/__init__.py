@@ -1,1 +1,2 @@
 from .test_training_programs import Test_Training_Programs
+from .test_department_details import Test_Department_Details

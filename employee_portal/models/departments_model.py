@@ -13,7 +13,7 @@ class Departments(models.Model):
         This model holds the data for Bangazon Departments.
 
         fields:
-            name - string. name of the department.
+            name - string. name of the department. max length: 20. 
 
     """
 

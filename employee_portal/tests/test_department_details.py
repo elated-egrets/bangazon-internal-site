@@ -10,17 +10,16 @@ and contains the expected key and values.
     author: Patrick Murphy
     purpose: testing the department details
 """
-
+test_department = Departments.objects.create()
 class Test_Department_Details(TestCase):
     """
         class to test the department details
     """
+    def test_list_department_details(self):
+        """method to test employee detail can be created"""
+        new_department = Departments.objects.create(
+            name="coding department",
+        )
 
-    def test_department_object_in_response(self):
-        """ method to test department object is in response context and contains expected key and value pairs """
-
-        response = self.client.get(reverse('employee_portal:department_detail'))
-
-        self.assertEqual(len(response.context['department']), 1)
-
-        self.assertIn(new_training_program.name.encode(), response.content)
+        response = self.client.get(reverse('employee_portal:department_detail', kwargs={"pk":1}))
+        self.assertEqual(response.status_code, 200)

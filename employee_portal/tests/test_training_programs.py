@@ -85,9 +85,22 @@ class Test_Training_Programs(TestCase):
 
         response = self.client.post(reverse('employee_portal:edit_training', kwargs={'pk':new_training_program.id}), {'name': 'test training', 'description': 'I hope this works!', 'start_date': '2000-12-12', 'end_date': '2001-12-12', 'max_attendees': 5})
 
-        # self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.status_code, 302)
         new_training_program.refresh_from_db()
         updated_response = self.client.get(reverse('employee_portal:training_detail', kwargs={'pk':new_training_program.id}))
         self.assertEqual(new_training_program.name, "test training")
 
-    
+    def test_training_program_can_be_deleted(self):
+        """ method to test if a training program can be deleted """
+        new_training_program = Training_Programs_Model.objects.create(
+            name='whoops spelled this wrong',
+            description='I hope this works!',
+            start_date='2000-12-12',
+            end_date='2020-12-12',
+            max_attendees=5
+        )
+
+        response = self.client.delete(reverse('employee_portal:delete_training', kwargs={'pk':new_training_program.id}))
+
+        # self.assertEqual(response.status_code, 200)
+        self.assertIsInstance(new_training_program, Training_Programs_Model)

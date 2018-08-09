@@ -1,0 +1,19 @@
+<nav>
+    {% if nav_location != 'employees' %}
+      <form action="/employees/" method='get'>
+        <input type="submit" value="Employees">
+      </form>
+    {% endif %}
+
+    {% if nav_location != 'training_programs' %}
+      <form action="/training_programs" method='get'>
+        <input type="submit" value="Training Programs">
+      </form>
+    {% endif %}
+
+    {% if nav_location != 'departments' %}
+      <form action="/departments/" method='get'>
+        <input type="submit" value="Departments">
+      </form>
+    {% endif %}
+  </nav>

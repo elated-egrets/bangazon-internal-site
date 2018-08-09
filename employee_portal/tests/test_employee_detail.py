@@ -35,3 +35,23 @@ class Test_Employee_Details(TestCase):
         # The encoded version is: b'pyth\xc3\xb6n!'
         self.assertIn(new_employee.first_name.encode(), response.content)
         self.assertIn(new_employee.last_name.encode(), response.content)
+
+    def test_details_post(self):
+
+        response = self.client.post(reverse(), {
+
+        })
+
+        self.assertEqual(response.status_code, 302)
+
+
+
+
+
+
+    def test_post_artist(self):
+
+      response = self.client.post(reverse('history:artist_form'), {'name': 'Bill Board', 'birth_date': '10/31/67', 'biggest_hit': "So Blue Fer You"})
+
+      # Getting 302 back because we have a success url and the view is redirecting under the covers?
+      self.assertEqual(response.status_code, 302)

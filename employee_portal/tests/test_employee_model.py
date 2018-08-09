@@ -26,17 +26,3 @@ class Test_Employee_Models(TestCase):
             is_supervisor=False
         )
 
-    #     response = self.client.get(reverse('employee_portal:employee'))
-
-    #     self.assertEqual(len(response.context['employee_list']), 1)
-
-    #     self.assertIn(new_training_program.name.encode(), response.content)
-
-
-    # def test_post_artist(self):
-    #     """ method to test that we can post an employee to the form """
-
-    #     response = self.client.post(reverse('employee_portal:add_employee'), {'name': 'hello', 'description': 'this is a test', 'start_date': '2019-12-12', 'end_date': '2019-12-12', 'max_attendees': 4})
-
-    #     # Getting 302 back because we have a success url and the view is redirecting under the covers?
-    #     self.assertEqual(response.status_code, 302)

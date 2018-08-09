@@ -1,5 +1,5 @@
 from django.urls import path
-from django.views.generic import ListView
+from django.views.generic import ListView, DetailView
 
 from . import views
 
@@ -12,5 +12,6 @@ urlpatterns = [
     # path('department/<int:pk>/edit', views.department_edit, name='department_edit'),
     path('', views.Index_View.as_view(), name='index'),
     path('training_programs/', views.Training_Program_List_View.as_view(), name='training'),
-    path('training_programs/add', views.Training_Program_Add_View.as_view(), name='add_training')
+    path('training_programs/add', views.Training_Program_Add_View.as_view(), name='add_training'),
+    path('employees/<int:pk>/', views.Employee_Detail_View.as_view(), name='employee_detail')
 ]

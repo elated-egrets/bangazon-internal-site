@@ -8,7 +8,7 @@ from django.db import models
 """
 
 
-class Departments_Model_Model(models.Model):
+class Departments_Model(models.Model):
     """
         This model holds the data for Bangazon Departments_Model.
 

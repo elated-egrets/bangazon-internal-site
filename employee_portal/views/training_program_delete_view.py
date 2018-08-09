@@ -1,5 +1,6 @@
 from django.views.generic import DeleteView
 from django.urls import reverse_lazy
+from django.http import HttpRequest
 from employee_portal.models import Training_Programs_Model
 
 """  
@@ -14,3 +15,6 @@ class Training_Program_Delete_View(DeleteView):
     model = Training_Programs_Model
     success_url = reverse_lazy('employee_portal:training')
     template_name = 'employee_portal/training_program_delete.html'
+
+    def delete(self, request, *args, **kwargs):
+        return super(Training_Program_Delete_View, self).delete(request, *args, **kwargs)

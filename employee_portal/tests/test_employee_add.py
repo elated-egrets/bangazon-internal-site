@@ -3,13 +3,13 @@ from django.test import TestCase
 from django.urls import reverse
 # from django.utils import timezone
 from employee_portal.models import Employee_Model
-from employee_portal.models import Departments
+from employee_portal.models import Departments_Model
 
 """module: test to add an employee
    author: Jonny Riggs
    purpose: test to see that an employee has been added.
 """
-test_department = Departments.objects.create()
+test_department = Departments_Model.objects.create()
 
 class Test_Employee_Add(TestCase):
 
@@ -22,7 +22,7 @@ class Test_Employee_Add(TestCase):
         self.assertIn('<form action="/employees/"'.encode(), response.content)
         self.assertIn('<input type="submit" value="Employees"'.encode(), response.content)
         self.assertIn('<input type="submit" value="Training Programs"'.encode(), response.content)
-        self.assertIn('<input type="submit" value="Departments"'.encode(), response.content)
+        self.assertIn('<input type="submit" value="Departments_Model"'.encode(), response.content)
         self.assertIn('<input type="text" name="first_name" maxlength="10" required id="id_first_name"'.encode(), response.content)
         self.assertIn('<input type="text" name="last_name" maxlength="10" required id="id_last_name"'.encode(), response.content)
         self.assertIn('<select name="department_id" required id="id_department_id"'.encode(), response.content)

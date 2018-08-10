@@ -1,7 +1,7 @@
 import unittest
 from django.test import TestCase
 from django.urls import reverse
-from employee_portal.models import Departments
+from employee_portal.models import Departments_Model
 
 """
 Your test suite must verify that a department object is in the response context
@@ -10,14 +10,14 @@ and contains the expected key and values.
     author: Patrick Murphy
     purpose: testing the department details
 """
-test_department = Departments.objects.create()
+test_department = Departments_Model.objects.create()
 class Test_Department_Details(TestCase):
     """
         class to test the department details
     """
     def test_list_department_details(self):
         """method to test employee detail can be created"""
-        new_department = Departments.objects.create(
+        new_department = Departments_Model.objects.create(
             name="coding department",
         )
 

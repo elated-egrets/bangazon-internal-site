@@ -1,5 +1,5 @@
 from django.views.generic import DetailView
-from employee_portal.models import Departments
+from employee_portal.models import Departments_Model
 
 class Department_Detail_View(DetailView):
   """
@@ -10,6 +10,6 @@ class Department_Detail_View(DetailView):
   specifies template name as 'employee_portal/department_detail.html'
   """
 
-  model = Departments
+  model = Departments_Model
   context_object_name = 'department'
   template_name = 'employee_portal/department_detail.html'

@@ -12,4 +12,4 @@ class Employee_Add_Form(forms.ModelForm):
 
     class Meta:
         model = Employee_Model
-        fields = ('first_name', 'last_name','department_id','end_date','is_supervisor', )
+        fields = ('first_name', 'last_name','department_id','is_supervisor', )

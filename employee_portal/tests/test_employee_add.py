@@ -26,5 +26,4 @@ class Test_Employee_Add(TestCase):
         self.assertIn('<input type="text" name="first_name" maxlength="10" required id="id_first_name"'.encode(), response.content)
         self.assertIn('<input type="text" name="last_name" maxlength="10" required id="id_last_name"'.encode(), response.content)
         self.assertIn('<select name="department_id" required id="id_department_id"'.encode(), response.content)
-        self.assertIn('<input type="text" name="end_date" required id="id_end_date"'.encode(), response.content)
         self.assertIn('<input type="checkbox" name="is_supervisor" id="id_is_supervisor"'.encode(), response.content)

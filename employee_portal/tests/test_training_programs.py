@@ -38,7 +38,7 @@ class Test_Training_Programs(TestCase):
         self.assertIn('<form action="/employees/"'.encode(), response.content)
         self.assertIn('<input type="submit" value="Employees"'.encode(), response.content)
         self.assertIn('<input type="submit" value="Training Programs"'.encode(), response.content)
-        self.assertIn('<input type="submit" value="Departments_Model"'.encode(), response.content)
+        self.assertIn('<input type="submit" value="Departments"'.encode(), response.content)
         self.assertIn('<input type="text" name="name" maxlength="40" required id="id_name"'.encode(), response.content)
         self.assertIn('<input type="text" name="description" maxlength="200" required id="id_description"'.encode(), response.content)
         self.assertIn('<input type="text" name="start_date" required id="id_start_date"'.encode(), response.content)

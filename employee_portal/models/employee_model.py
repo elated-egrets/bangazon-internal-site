@@ -21,9 +21,9 @@ class Employee_Model(models.Model):
     last_name = models.CharField(max_length = 10)
     department_id = models.ForeignKey(Departments_Model, on_delete=models.CASCADE)
     start_date = timezone.now()
-    end_date = models.DateField()
+    end_date = models.DateField(null=False,blank=False,auto_now=True)
     is_supervisor = models.BooleanField(default=False)
-    training_program = models.ManyToManyField(Training_Programs_Model)
+    training_program = models.ManyToManyField(Training_Programs_Model, related_name="training_program")
 
     def __str__(self):
         """A string representation of the Employee.

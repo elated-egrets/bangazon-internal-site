@@ -30,6 +30,8 @@ class Test_Employee_Details(TestCase):
         response = self.client.get(reverse('employee_portal:employee_detail', kwargs={"pk":1}))
         self.assertEqual(response.status_code, 200)
 
+        self.assertIn("Richard What".encode(), response.content)
+
         # Is this stuff in the content of the body?
         # .encode converts from unicode to utf-8
         # example:

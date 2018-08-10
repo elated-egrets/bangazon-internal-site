@@ -3,6 +3,7 @@ from django.views.generic import TemplateView, DetailView
 from employee_portal.models import Employee_Model
 from employee_portal.models import Departments_Model
 
+
 # class Employee_Detail_View(TemplateView):
 #   """
 #       The purpose of this class is to create the detail view page for the site. This allows us to click on the employee name and view their detials.
@@ -20,3 +21,4 @@ class Employee_Detail_View(DetailView):
 
 class Employee_Department_View(DetailView):
     model = Departments_Model
+

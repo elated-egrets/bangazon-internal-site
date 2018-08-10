@@ -1,2 +1,4 @@
 from .training_program_add_form import Training_Program_Add_Form
 from .department_add_form import Department_Add_Form
+from .employee_add_form import Employee_Add_Form
+

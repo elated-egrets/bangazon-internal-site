@@ -1,7 +1,8 @@
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import TemplateView, DetailView
 from employee_portal.models import Employee_Model
-# from employee_portal.models import Departments
+from employee_portal.models import Departments_Model
+
 
 # class Employee_Detail_View(TemplateView):
 #   """
@@ -18,5 +19,6 @@ class Employee_Detail_View(DetailView):
     model = Employee_Model
     template_name = 'employee_portal/employee_detail.html'
 
-# class Employee_Department_View(DetailView):
-#     model = Departments
+class Employee_Department_View(DetailView):
+    model = Departments_Model
+

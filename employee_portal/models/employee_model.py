@@ -1,6 +1,6 @@
 from django.db import models
 from django.utils import timezone
-from .departments_model import Departments
+from .departments_model import Departments_Model
 from .training_programs_model import Training_Programs_Model
 
 class Employee_Model(models.Model):
@@ -19,7 +19,7 @@ class Employee_Model(models.Model):
 
     first_name = models.CharField(max_length = 10)
     last_name = models.CharField(max_length = 10)
-    department_id = models.ForeignKey(Departments, on_delete=models.CASCADE)
+    department_id = models.ForeignKey(Departments_Model, on_delete=models.CASCADE)
     start_date = timezone.now()
     end_date = models.DateField()
     is_supervisor = models.BooleanField(default=False)

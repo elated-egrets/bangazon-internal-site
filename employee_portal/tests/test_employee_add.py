@@ -3,13 +3,13 @@ from django.test import TestCase
 from django.urls import reverse
 # from django.utils import timezone
 from employee_portal.models import Employee_Model
-from employee_portal.models import Departments
+from employee_portal.models import Departments_Model
 
 """module: test to add an employee
    author: Jonny Riggs
    purpose: test to see that an employee has been added.
 """
-test_department = Departments.objects.create()
+test_department = Departments_Model.objects.create()
 
 class Test_Employee_Add(TestCase):
 

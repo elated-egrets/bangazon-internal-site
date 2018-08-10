@@ -3,14 +3,14 @@ from django.test import TestCase
 from django.urls import reverse
 # from django.utils import timezone
 from employee_portal.models import Employee_Model
-from employee_portal.models import Departments
+from employee_portal.models import Departments_Model
 
 """
     module: test for Employee model
     author: Ronnie Young
     purpose: testing the Employee model
 """
-test_department = Departments.objects.create()
+test_department = Departments_Model.objects.create()
 class Test_Employee_Models(TestCase):
     """
         class to test the Employee model

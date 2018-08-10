@@ -1,0 +1,15 @@
+{% extends "employee_list/index.html" %}
+
+{% block main_stuff %}
+  {% include "employee_list/nav_bar.html" with nav_location=location %}
+
+  <h1>Here's a List of Employees/h1>
+
+  <ul>
+    {% for employee in employee_list %}
+    <li>
+      <a href="{% url 'history:employee_detail' employee.id %}">{{employee.first_name}} {{employee.last_name}}</a>
+    </li>
+    {% endfor %}
+  </ul>
+{% endblock main_stuff %}

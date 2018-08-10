@@ -85,9 +85,49 @@ class Test_Training_Programs(TestCase):
 
         response = self.client.post(reverse('employee_portal:edit_training', kwargs={'pk':new_training_program.id}), {'name': 'test training', 'description': 'I hope this works!', 'start_date': '2000-12-12', 'end_date': '2001-12-12', 'max_attendees': 5})
 
-        # self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.status_code, 302)
         new_training_program.refresh_from_db()
         updated_response = self.client.get(reverse('employee_portal:training_detail', kwargs={'pk':new_training_program.id}))
         self.assertEqual(new_training_program.name, "test training")
 
-    
+    def test_training_program_can_be_deleted(self):
+        """ method to test if a training program can be deleted """
+        new_training_program = Training_Programs_Model.objects.create(
+            name='training to delete',
+            description='I hope this works!',
+            start_date='2021-12-12',
+            end_date='2022-12-12',
+            max_attendees=5
+        )
+
+        response = self.client.get(reverse('employee_portal:delete_training', kwargs={'pk':new_training_program.id}), follow=True)
+        self.assertIn('Are you sure you want to delete'.encode(), response.content)
+        self.assertEqual(response.status_code, 200)
+
+
+        delete_response = self.client.post(reverse('employee_portal:delete_training', kwargs={'pk':new_training_program.id}), follow=True)
+        self.assertEqual(delete_response.status_code, 200)
+
+        post_delete_response = self.client.get(reverse('employee_portal:training'))
+
+        self.assertNotIn('training to delete'.encode(), post_delete_response.content)
+
+    def test_training_program_in_past_cannot_be_deleted(self):
+        """ method to test if a training program in the past will not be deleted """
+        new_training_program = Training_Programs_Model.objects.create(
+            name='past training',
+            description='I hope this works!',
+            start_date='2000-12-12',
+            end_date='2001-12-12',
+            max_attendees=5
+        )
+
+        response = self.client.post(reverse('employee_portal:delete_training', kwargs={'pk':new_training_program.id}), follow=True)
+        self.assertEqual(response.status_code, 200)
+
+        post_delete_response = self.client.get(reverse('employee_portal:training'))
+        self.assertIn('past training'.encode(), post_delete_response.content)
+
+
+
+

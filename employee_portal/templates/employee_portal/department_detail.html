@@ -1,0 +1,19 @@
+{% extends "employee_portal/index.html" %}
+
+{% block main_stuff %}
+    {% include 'employee_portal/nav_bar.html' with nav_location=department %}
+    <h3 class="department_detail">Department: {{department.name}}</h3>
+
+    <ol>
+        <h5>List of employees in this department</h5>
+            {% for employee in department.employee_model_set.all %}
+                <li>
+                    {{employee.first_name}} {{employee.last_name}}
+                </li>
+            {% endfor %}
+        <a href="{% url 'employee_portal:department_list' %}">Back to list</a>
+
+    </ol>
+{% endblock %}
+
+

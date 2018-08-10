@@ -1,2 +1,3 @@
 from .training_program_add_form import Training_Program_Add_Form
 from .employee_add_form import Employee_Add_Form
+from .employee_edit_form import Employee_Edit_Form

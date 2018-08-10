@@ -1,6 +1,7 @@
 from .employee_list_view import Employee_List_View
 
 from .employee_add_view import Employee_Add_View
+from .employee_edit_view import Employee_Edit_View
 from .index_view import Index_View
 from .training_program_list_view import Training_Program_List_View
 from .training_program_add_view import Training_Program_Add_View

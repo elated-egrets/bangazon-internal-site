@@ -18,5 +18,5 @@ class Employee_List_View(ListView):
     '''
 
     model = models.Employee_Model
-    template_name = 'employee_portal/employee_list.html'
+    template_name = 'employee_portal/employee_model_list.html'
     context_object_name = 'employee_list'

@@ -8,7 +8,9 @@
 <a href="{% url 'employee_portal:add_employee' %}">Add Employee</a>
 <ul>
 {% for employee in object_list %}
-    <li>{{ employee.first_name}} - {{ employee.last_name }}</li>
+<li>
+    <a href="{% url 'employee_portal:employee_detail' employee.id %}">{{employee.first_name}} {{employee.last_name}}</a>
+  </li>
     {% empty %}
 {% endfor %}
 </ul>

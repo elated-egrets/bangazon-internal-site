@@ -2,3 +2,13 @@
 
 <h2>Employee Information {{employee_model.first_name}} {{employee_model.last_name}}</h2>
 <h3>Department {{employee_model.department_id.name}}</h3>
+<h3>Training programs </h3>
+
+
+<ul>
+{% for training in employee_model.training_program.all %}
+<li>
+    {{training.name}}
+</li>
+{% endfor %}
+</ul>

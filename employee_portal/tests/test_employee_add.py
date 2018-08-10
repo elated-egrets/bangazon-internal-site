@@ -22,7 +22,7 @@ class Test_Employee_Add(TestCase):
         self.assertIn('<form action="/employees/"'.encode(), response.content)
         self.assertIn('<input type="submit" value="Employees"'.encode(), response.content)
         self.assertIn('<input type="submit" value="Training Programs"'.encode(), response.content)
-        self.assertIn('<input type="submit" value="Departments_Model"'.encode(), response.content)
+        self.assertIn('<input type="submit" value="Departments"'.encode(), response.content)
         self.assertIn('<input type="text" name="first_name" maxlength="10" required id="id_first_name"'.encode(), response.content)
         self.assertIn('<input type="text" name="last_name" maxlength="10" required id="id_last_name"'.encode(), response.content)
         self.assertIn('<select name="department_id" required id="id_department_id"'.encode(), response.content)

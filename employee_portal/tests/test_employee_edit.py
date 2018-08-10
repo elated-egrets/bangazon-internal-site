@@ -2,7 +2,7 @@ import unittest
 from django.test import TestCase
 from django.utils import timezone
 from django.urls import reverse
-from employee_portal.models import Employee_Model, Departments, Training_Programs_Model
+from employee_portal.models import Employee_Model, Departments_Model, Training_Programs_Model
 
 
 class Test_Training_Programs(TestCase):
@@ -14,7 +14,7 @@ class Test_Training_Programs(TestCase):
 
     def test_employee_edit_view_can_be_submitted(self):
         """ method to test that we get a correct status code back from a put operation on employee edit """
-        new_department = Departments.objects.create(
+        new_department = Departments_Model.objects.create(
             name = "web development"
         )
         new_employee = Employee_Model.objects.create(

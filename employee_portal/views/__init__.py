@@ -11,3 +11,4 @@ from .employee_detail_view import Employee_Department_View
 from .employee_detail_view import Employee_Detail_View
 from .training_program_detail_view import Training_Program_Detail_View
 from .training_program_edit_view import Training_Program_Edit_View
+from .training_program_delete_view import Training_Program_Delete_View

@@ -3,7 +3,7 @@
 {% block main_stuff %}
   {% include "employee_portal/nav_bar.html" with nav_location=location %}
 
-<h1>{{training.name}}</h1>
+<h1>Training Program {{training.name}}</h1>
 <h3>{{training.description}}</h3>
 <p>This program runs from {{training.start_date}} to {{training.end_date}} and can hold a maximum number of {{training.max_attendees}} people.</p>
 

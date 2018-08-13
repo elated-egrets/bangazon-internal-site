@@ -1,3 +1,7 @@
+{% extends "employee_portal/index.html" %}
+
+{% block main_stuff %}
+    {% include 'employee_portal/nav_bar.html' with nav_location=department %}
 <h1>This is a list of employee details</h1>
 
 <h2>Employee Information {{employee_model.first_name}} {{employee_model.last_name}}</h2>
@@ -15,3 +19,4 @@
 
 <a href="{% url 'employee_portal:employee_edit' employee_model.id %}">edit employee details</a>
 <a href="{% url 'employee_portal:employee_list' %}">back to list</a>
+{% endblock %}

@@ -2,7 +2,7 @@
 
 {% block main_stuff %}
     {% include 'employee_portal/nav_bar.html' with nav_location=department %}
-    <h3 class="department_detail">Department: {{department.name}}</h3>
+    <h1>Department {{department.name}}</h1>
 
     <ol>
         <h5>List of employees in this department</h5>
@@ -11,9 +11,10 @@
                     {{employee.first_name}} {{employee.last_name}}
                 </li>
             {% endfor %}
-        <a href="{% url 'employee_portal:department_list' %}">Back to list</a>
+        
 
     </ol>
 
     <a href="{% url 'employee_portal:department_edit' department.id %}">edit department</a>
+    <a href="{% url 'employee_portal:department_list' %}">Back to list</a>
 {% endblock %}

@@ -1,10 +1,14 @@
 {% extends "employee_portal/index.html" %}
 
+
 {% block main_stuff %}
     {% include 'employee_portal/nav_bar.html' with nav_location=department %}
 <h1>This is a list of employee details</h1>
 
-<h2>Employee Information {{employee_model.first_name}} {{employee_model.last_name}}</h2>
+
+{% block main_stuff %}
+    {% include 'employee_portal/nav_bar.html' with nav_location=department %}
+<h1>Employee {{employee_model.first_name}} {{employee_model.last_name}}</h1>
 <h3>Department: {{employee_model.department_id.name}}</h3>
 <h3>Training programs </h3>
 

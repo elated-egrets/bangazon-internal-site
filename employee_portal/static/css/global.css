@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed");
+
+body {
+  background-color: #1b1b1e;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+li,
+label {
+  color: #30bced;
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+.nav_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.nav_container form input {
+  flex-direction: row;
+  padding: 10px;
+  margin: 10px;
+  background-color: #FF6344;
+  font-size: 1.2em
+}

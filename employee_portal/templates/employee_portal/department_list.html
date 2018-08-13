@@ -3,6 +3,7 @@
 {% block main_stuff %}
     {% include 'employee_portal/nav_bar.html' with nav_location=department %}
     <p class="test">Bangazon Departments:</p>
+    <a href="{% url 'employee_portal:add_department' %}">add new department</a>
     <ul>
         {% for department in department_list %}
         <li>

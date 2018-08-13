@@ -21,7 +21,7 @@ class Employee_Model(models.Model):
     last_name = models.CharField(max_length = 10)
     department_id = models.ForeignKey(Departments_Model, on_delete=models.CASCADE)
     start_date = timezone.now()
-    end_date = models.DateField()
+    end_date = models.DateField(null=True, blank=True)
     is_supervisor = models.BooleanField(default=False)
     training_program = models.ManyToManyField(Training_Programs_Model, related_name="training_program")
 

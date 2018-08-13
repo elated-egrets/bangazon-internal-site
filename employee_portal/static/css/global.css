@@ -18,6 +18,12 @@ label {
   font-family: "Barlow Semi Condensed", sans-serif;
 }
 
+form input, form label {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  margin: 5px;
+  font-size: 1.1em
+}
+
 .nav_container {
   display: flex;
   flex-direction: row;
@@ -30,4 +36,10 @@ label {
   margin: 10px;
   background-color: #FF6344;
   font-size: 1.2em
+}
+
+.input_form {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
 }

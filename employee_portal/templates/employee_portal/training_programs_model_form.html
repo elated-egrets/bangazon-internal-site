@@ -1,12 +1,14 @@
+<!-- Looks like this is unused -->
+
 {% extends "employee_portal/index.html" %}
 
 {% block main_stuff %}
 
   {% include "employee_portal/nav_bar.html" with nav_location=location %}
 
-  <h3>Add a new training programs</h3>
+  <h3>Add a new training program</h3>
 
-  <form method='post'>
+  <form method='post' class="input_form">
     {% csrf_token %}
     {{ form }}
     <input type="submit" value="Add Program">

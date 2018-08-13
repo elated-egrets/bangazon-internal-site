@@ -5,7 +5,7 @@
 {% include "employee_portal/nav_bar.html" with nav_location=location %}
 
 <h1>Employees</h1>
-<a href="{% url 'employee_portal:add_employee' %}">Add Employee</a>
+<a href="{% url 'employee_portal:add_employee' %}">add employee</a>
 <ul>
 {% for employee in object_list %}
 <li>

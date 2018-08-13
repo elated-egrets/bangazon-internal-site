@@ -31,3 +31,8 @@ class Training_Programs_Model(models.Model):
     start_date = models.DateField()
     end_date = models.DateField()
     max_attendees = models.IntegerField()
+
+    def __str__(self):
+
+
+        return f'{self.name}'

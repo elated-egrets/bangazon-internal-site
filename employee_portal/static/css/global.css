@@ -12,7 +12,8 @@ h5,
 h6,
 p,
 a,
-li {
+li,
+label {
   color: #30bced;
   font-family: "Barlow Semi Condensed", sans-serif;
 }
@@ -27,6 +28,6 @@ li {
   flex-direction: row;
   padding: 10px;
   margin: 10px;
-  background-color: #FC5130;
+  background-color: #FF6344;
   font-size: 1.2em
 }

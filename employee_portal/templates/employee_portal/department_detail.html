@@ -11,9 +11,10 @@
                     {{employee.first_name}} {{employee.last_name}}
                 </li>
             {% endfor %}
-        <a href="{% url 'employee_portal:department_list' %}">Back to list</a>
+        
 
     </ol>
 
     <a href="{% url 'employee_portal:department_edit' department.id %}">edit department</a>
+    <a href="{% url 'employee_portal:department_list' %}">Back to list</a>
 {% endblock %}
